@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 from csv import writer
 
-url = requests.get('https://pcpartpicker.com/product/9nm323/amd-ryzen-5-3600-36-thz-6-core-processor-100-100000031box')
+url=input('Enter PC Part Picker URL here: ')
+url=requests.get(url)
 
 soup = BeautifulSoup(url.text, 'html.parser')
 
